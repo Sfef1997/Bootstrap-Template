@@ -1,0 +1,263 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc ;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+      --section-color:#eff7fa;
+    --main-transition:0.3s;
+  
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+  
+}
+.btn-main{
+background-color: var(--red-color);
+border-radius: 15px;
+color: white;
+margin-left: 5px;
+padding: .5rem 1rem;
+transition: var(--main-transition);
+color: var(--yellow-color);
+}
+.btn-main:hover{
+text-decoration: none;
+background-color: var(--green-color);
+color: white;
+}
+
+.main-title::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ .main-title svg{
+    font-size: 60px; 
+    color: var(--yellow-color);
+}
+
+/* Start navbar */
+
+.navbar{
+    background-color: var(--dark-color);
+   
+}
+.text-light {
+display: flex;
+flex-direction: column;
+}
+.text-light svg{
+color: var(--green-color);
+   
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+.navbar .navbar-nav .nav-link{
+color: white;
+transition: var(--main-transition);
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus{
+color: var(--green-color);
+}
+
+.navbar .search{
+    color: white;
+    border-left: 1px solid var(--green-color);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    transition: var(--main-transition);
+    border: 1px solid white;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--green-color) ;
+}
+
+
+/*  Start landing */
+.landing{
+padding-top: 100px;
+padding-bottom: 100px;
+background-color: var(--dark-color);
+}
+
+.landing p{
+    max-width: 98%;
+}
+/*  End landing */
+
+/* Start featuers */
+.features{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.features .main-title svg{
+    font-size: 60px; 
+    color: var(--yellow-color);
+}
+
+.features .container .icon-holder .number{
+    font-size: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color:var(--section-color);
+    bottom: 0px;
+}
+.features .container .feat{
+    padding-top: 250px;
+    /* padding-bottom: 50px; */
+}
+.features .container .icon-holder .icon{
+    font-size: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--green-color);
+    bottom: 0px;
+}
+.features .container .feat h4{
+    color: var(--yellow-color);
+}
+/* End featuers */
+
+/* Start our work */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul .active{
+    background-color:var(--red-color);
+    color: var(--yellow-color);
+    border-radius: 8px;
+}
+.our-work li{
+padding: 1rem .5rem;
+cursor: pointer;
+transition: var(--main-transition);
+}
+.our-work ul li:not(.active):hover{
+color: var(--red-color);
+}
+
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+     cursor: pointer;
+}
+
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc78;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: var(--main-transition);
+    transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before{
+   transform: translateX(0);
+}
+/* End our work */
+
+/* Start stuff */
+.stuff .desc{
+max-width: 450px;
+}
+@media (min-width:786px){
+    .stuff .desc p{
+text-align: start !important;
+    }      
+}
+/* End stuff */
+
+/* Start meet the Team */
+.meet-team{
+background-color: var(--section-color);
+}
+
+.meet-team .container .text h3{
+    color: var(--yellow-color);
+}
+.meet-team .container .holder-box{
+    gap: 30px ;
+}
+.meet-team .container .row .box{
+    background-color: #fff;
+    border-radius: 12px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    text-align: center;
+}
+.meet-team .container .row .box:hover{
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   transform: translateY(-10px);
+    
+}
+.meet-team .container .holder-box .box h3{
+background-color: var(--green-color);
+}
+
+/* Start Project */
+.project {
+    background-color: var(--dark-color);
+}
+/* End Project */
+
+/* Start subscribe */
+
+.subscribe{
+background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"]{
+    padding: 2px;
+    border: none;
+    border-radius: 15px;
+    background-color:transparent;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input::placeholder{
+    color: white;
+}
+.subscribe .btn-main{
+background-color: var(--dark-color);
+}
+/* End subscribe */
+
+/* start footer */
+footer{
+    background-color: var(--dark-color);
+}
+footer .info{
+    flex-direction: column;
+}
+footer .copyright span{
+    color: var(--green-color);
+}
+footer .copyright .bondi{
+    color: var(--yellow-color);
+}
+
+footer .contact p{
+    line-height: 1.8;
+}
